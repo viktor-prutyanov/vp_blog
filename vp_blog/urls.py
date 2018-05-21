@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-#from .views import home
+from blog_posts.views import health
 
 urlpatterns = [
     url('admin/', admin.site.urls),
+    url(r'^health$', health),
     url('posts/', include('blog_posts.urls', namespace='blog_posts')),
-#    url(r'^$', home, name='home' ),
 ]
