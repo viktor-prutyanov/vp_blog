@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 from django.http import HttpResponse
-
 from blog_posts.models import blog_posts
 
 class PostsForm(ModelForm):
@@ -32,7 +31,7 @@ def post_update(request, pk, template_name='blog_posts/post_form.html'):
 
 def post_delete(request, pk, template_name='blog_posts/post_delete.html'):
     post = get_object_or_404(blog_posts, pk=pk)
-    if request.method=='POST':
+    if request.method == 'POST':
         post.delete()
         return redirect('blog_posts:post_list')
     return render(request, template_name, {'object': post})
