@@ -35,6 +35,3 @@ def post_delete(request, pk, template_name='blog_posts/post_delete.html'):
         post.delete()
         return redirect('blog_posts:post_list')
     return render(request, template_name, {'object': post})
-
-def health(request):
-    return HttpResponse("<html><body>I'm healthy</body></html>")

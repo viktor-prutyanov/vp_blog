@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -126,4 +126,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-INTERNAL_IPS = ['127.0.0.1']
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
