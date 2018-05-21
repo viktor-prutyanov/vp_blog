@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'vp_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRESQL_DATABASE'),
-        'USER': os.getenv('POSTGRESQL_USER'),
-        'PASSWORD': os.getenv('POSTGRESQL_PASSWORD'),
-        'HOST': '127.0.0.1',
+        'NAME': os.getenv('DATABASE_NAME'),
+        'USER': os.getenv('DATABASE_USER'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+        'HOST': 'postgresql.vp-blog1.svc',
         'PORT': '5432',
     }
 }
