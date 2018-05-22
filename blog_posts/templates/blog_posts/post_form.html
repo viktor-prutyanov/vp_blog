@@ -28,13 +28,13 @@
               <div class="panel-heading">
                 <div class="fieldWrapper">
                   {{ form.title.errors }}
-                  {{ form.title }}
+                  <input type="title" class="form-control" name="{{ form.title.name }}" maxlength="{{ form.title.field.max_length }}" {% if form.title.field.required %}required{% endif %} id="{{ form.title.id_for_label }}" placeholder="Title"/>
                 </div>
                 </div>
               <div class="panel-body">
                 <div class="fieldWrapper">
                   {{ form.text.errors }}
-                  {{ form.text }}
+                  <input type="text" class="form-control" name="{{ form.text.name }}" maxlength="{{ form.text.field.max_length }}" {% if form.text.field.required %}required{% endif %} id="{{ form.text.id_for_label }}" placeholder="Text"/>
                 </div>
               </div>
             </div>
