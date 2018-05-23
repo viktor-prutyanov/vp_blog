@@ -28,10 +28,16 @@
             <li><a href="{% url "blog_posts:post_new" %}">New</a></li>
           </ul>
           <div class="navbar-form navbar-left">
-            <div class="form-group">
+            <!--<div class="form-group">
               <input type="text" class="form-control" placeholder="Search" id="search-input">
             </div>
-            <button type="submit" class="btn btn-primary" onclick="search()">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="search()">Submit</button>-->
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" id="search-input">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary" onclick="search()">Submit</button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
